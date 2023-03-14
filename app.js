@@ -1,4 +1,6 @@
 const express = require('express')
+const serverless = require('serverless-http');
+
 const cors = require('cors')
 const connectToDb = require('./db/database')
 const usersRouter = require('./routes/users')
@@ -16,4 +18,6 @@ app.use('/users', usersRouter)
 app.use('/products', productsRouter)
 app.use('/orders', authGuardCheck, ordersRouter)
 
-app.listen(() => {console.log('Server is running in Vercel')})
+// app.listen(() => {console.log('Server is running in Vercel')})
+
+module.exports.handler = serverless(app);
