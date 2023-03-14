@@ -13,9 +13,9 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.use('/users', usersRouter)
-app.use('/products', productsRouter)
-app.use('/orders', authGuardCheck, ordersRouter)
+app.use('/api/users', usersRouter)
+app.use('/api/products', productsRouter)
+app.use('/api/orders', authGuardCheck, ordersRouter)
 
 // app.listen(() => {console.log('Server is running in Vercel')})
 
