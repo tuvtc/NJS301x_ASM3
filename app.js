@@ -16,4 +16,4 @@ app.use('/users', usersRouter)
 app.use('/products', productsRouter)
 app.use('/orders', authGuardCheck, ordersRouter)
 
-app.listen(5000, () => {console.log('Server is running in port 5000')})
+app.listen(() => {console.log('Server is running in Vercel')})
