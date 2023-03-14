@@ -1,16 +1,10 @@
 {
   "name": "asm3_node_server",
   "version": 2,
-  "builds": [
-      {
-          "src": "./app.js",
-          "use": "@vercel/node"
-      }
-  ],
   "routes": [
       {
           "src": "/(.*)",
-          "dest": "/"
+          "dest": "/app.js"
       }
   ]
 }
