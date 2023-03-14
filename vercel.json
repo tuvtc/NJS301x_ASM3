@@ -4,7 +4,7 @@
   "routes": [
       {
           "src": "/(.*)",
-          "dest": "/app.handler"
+          "dest": "app.handler"
       }
   ]
 }
